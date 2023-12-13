@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gameappui/style/app_colors.dart';
 
-class CustomeInputs extends StatelessWidget {
+class CustomeInputs extends StatefulWidget {
   const CustomeInputs(
       {super.key,
       this.textEditingController,
@@ -21,9 +21,15 @@ class CustomeInputs extends StatelessWidget {
   final dynamic inputFormatters;
 
   @override
+  State<CustomeInputs> createState() => _CustomeInputsState();
+}
+
+class _CustomeInputsState extends State<CustomeInputs> {
+  bool obscureTextbool = true;
+  @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 45,
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
@@ -31,21 +37,30 @@ class CustomeInputs extends StatelessWidget {
       ),
       child: TextFormField(
         style: const TextStyle(color: Colors.black),
-        obscureText: credentials ? true : false,
-        validator: validators,
-        controller: textEditingController,
-        keyboardType: textinputTypes,
+        obscureText: obscureTextbool ? true : false,
+        validator: widget.validators,
+        controller: widget.textEditingController,
+        keyboardType: widget.textinputTypes,
         decoration: InputDecoration(
             focusColor: inputcolor,
             hoverColor: inputcolor,
             fillColor: inputcolor,
             prefixIcon: Icon(
-              icons,
+              widget.icons,
               color: Colors.black,
               size: 20,
             ),
-            suffixIcon: credentials ? const Icon(Icons.remove_red_eye) : null,
-            hintText: hintText,
+            suffixIcon: widget.credentials
+                ? IconButton(
+                    icon: const Icon(Icons.remove_red_eye),
+                    onPressed: () {
+                      setState(() {
+                        obscureTextbool = !obscureTextbool;
+                      });
+                    },
+                  )
+                : null,
+            hintText: widget.hintText,
             filled: true,
             border: InputBorder.none,
             enabledBorder: InputBorder.none,

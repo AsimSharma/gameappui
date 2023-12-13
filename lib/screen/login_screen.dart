@@ -4,6 +4,7 @@ import 'package:gameappui/style/app_colors.dart';
 
 import '../widgets/custome_btns.dart';
 import '../widgets/custome_inputs.dart';
+import '../widgets/logo_header.dart';
 import '../widgets/social_login_btn.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -121,26 +122,6 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ],
         ),
-      ),
-    );
-  }
-
-  Container logoheader() {
-    return Container(
-      padding: const EdgeInsets.all(10),
-      child: const Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(
-            Icons.abc,
-            color: Colors.white,
-            size: 36,
-          ),
-          Text(
-            "Mero Game",
-            style: headingText,
-          )
-        ],
       ),
     );
   }

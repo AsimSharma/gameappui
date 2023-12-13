@@ -12,17 +12,17 @@ class OnBoarding {
 
 final onboardlist = [
   OnBoarding(
-      title: "your World of Beast 1",
+      title: "Your World of Beast 1",
       images: "a.png",
       decription:
           "What is a game user interface? A video game user interface is a "),
   OnBoarding(
-      title: "your World of Beast 2",
+      title: "Your World of Beast 2",
       images: "a.png",
       decription:
           "What is a game user interface? A video game user interface is a "),
   OnBoarding(
-      title: "your World of Beast",
+      title: "Your World of Beast 3",
       images: "a.png",
       decription:
           "What is a game user interface? A video game user interface is a ")
