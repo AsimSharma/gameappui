@@ -12,7 +12,7 @@ class HomeScreen extends StatelessWidget {
         child: Center(
           child: Column(
             children: [
-              Text(
+              const Text(
                 "Welcome home Gamer's",
                 style: headingText,
               ),
@@ -26,7 +26,18 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.popAndPushNamed(context, GameUiApp.passwordreset);
                   },
-                  child: const Text("password_resets"))
+                  child: const Text("password_resets")),
+              TextButton(
+                  onPressed: () {
+                    Navigator.popAndPushNamed(
+                        context, GameUiApp.passwordresetsucessfully);
+                  },
+                  child: const Text("password_resets_successfully")),
+              TextButton(
+                  onPressed: () {
+                    Navigator.popAndPushNamed(context, GameUiApp.welcomescreen);
+                  },
+                  child: const Text("wellcome_screen"))
             ],
           ),
         ),

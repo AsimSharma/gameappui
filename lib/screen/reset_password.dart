@@ -30,7 +30,7 @@ class ResetPassword extends StatelessWidget {
                 ),
                 SizedBox(
                   height: 250,
-                  child: Image.asset("assets/images/resetpassword.png"),
+                  child: Image.asset("assets/images/forgetpassword.png"),
                 ),
                 const SizedBox(
                   height: 20,
@@ -58,9 +58,21 @@ class ResetPassword extends StatelessWidget {
                   height: 10,
                 ),
                 const Padding(
-                  padding: const EdgeInsets.all(20),
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
                   child: CustomeInputs(
                       hintText: "password",
+                      credentials: true,
+                      icons: Icons.lock,
+                      textinputTypes: TextInputType.emailAddress),
+                ),
+                const SizedBox(
+                  height: 15,
+                ),
+                const Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  child: CustomeInputs(
+                      hintText: "Confirm_password",
+                      credentials: true,
                       icons: Icons.lock,
                       textinputTypes: TextInputType.emailAddress),
                 ),
@@ -68,9 +80,9 @@ class ResetPassword extends StatelessWidget {
                   height: 20,
                 ),
                 CustomBtn(
-                  btnTitle: "Send invitation",
+                  btnTitle: "Change password",
                   onPressed: () {},
-                  width: 378,
+                  width: 370,
                 )
               ],
             )),

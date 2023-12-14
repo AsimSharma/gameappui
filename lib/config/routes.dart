@@ -6,4 +6,6 @@ class GameUiApp {
   static const String onboardingScreen = "/onBoargingscreen";
   static const String forgetpassword = "/forgetpassword";
   static const String passwordreset = "/passwordreset";
+  static const String passwordresetsucessfully = "/passwordresetsucessfully";
+  static const String welcomescreen = "/welcomescreen";
 }

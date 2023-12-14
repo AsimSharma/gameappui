@@ -68,7 +68,7 @@ class ForgetPassworScreen extends StatelessWidget {
                   height: 20,
                 ),
                 CustomBtn(
-                    btnTitle: "Send invitation", width: 378, onPressed: () {})
+                    btnTitle: "Send invitation", width: 370, onPressed: () {})
               ],
             )),
       ),

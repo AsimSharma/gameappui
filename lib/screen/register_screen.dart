@@ -67,7 +67,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     CustomeInputs(
                         hintText: "Password",
-                        icons: Icons.key,
+                        icons: Icons.lock,
                         textEditingController: passwordController,
                         credentials: true,
                         textinputTypes: TextInputType.text),
@@ -76,7 +76,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     CustomeInputs(
                         hintText: "Confirm-password",
-                        icons: Icons.key,
+                        icons: Icons.lock,
                         credentials: true,
                         textEditingController: confirmpassword,
                         textinputTypes: TextInputType.text),
@@ -93,13 +93,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       )
                     ]),
                     const SizedBox(
-                      height: 17,
+                      height: 15,
                     ),
                     CustomBtn(btnTitle: "SignUp", onPressed: () {}),
                     const SizedBox(
-                      height: 17,
+                      height: 15,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         const Text("Don't you have account??",
                             style: secondText),

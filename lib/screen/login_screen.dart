@@ -52,22 +52,25 @@ class _LoginScreenState extends State<LoginScreen> {
                       textinputTypes: TextInputType.emailAddress,
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 15,
                     ),
                     const CustomeInputs(
                       hintText: "password",
-                      icons: Icons.password,
+                      icons: Icons.lock,
                       credentials: true,
                       textinputTypes: TextInputType.emailAddress,
                     ),
                     const SizedBox(
-                      height: 10,
+                      height: 8,
                     ),
-                    const Align(
+                    Align(
                       alignment: Alignment.bottomRight,
-                      child: Text(
-                        "Frget Password??",
-                        style: secondText,
+                      child: TextButton(
+                        onPressed: () {},
+                        child: const Text(
+                          "Forget Password??",
+                          style: secondText,
+                        ),
                       ),
                     ),
                     const SizedBox(
