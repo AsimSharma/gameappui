@@ -10,7 +10,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
         child: Center(
-          child: Row(
+          child: Column(
             children: [
               Text(
                 "Welcome home Gamer's",
@@ -21,7 +21,12 @@ class HomeScreen extends StatelessWidget {
                     Navigator.popAndPushNamed(
                         context, GameUiApp.forgetpassword);
                   },
-                  child: const Text("forget_password"))
+                  child: const Text("forget_password")),
+              TextButton(
+                  onPressed: () {
+                    Navigator.popAndPushNamed(context, GameUiApp.passwordreset);
+                  },
+                  child: const Text("password_resets"))
             ],
           ),
         ),

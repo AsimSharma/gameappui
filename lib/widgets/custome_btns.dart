@@ -2,10 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:gameappui/config/style/app_colors.dart';
 
 class CustomBtn extends StatelessWidget {
-  const CustomBtn({super.key, required this.btnTitle, required this.onPressed});
+  const CustomBtn(
+      {super.key,
+      required this.btnTitle,
+      required this.onPressed,
+      this.width = 300});
 
   final String btnTitle;
   final VoidCallback onPressed;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +18,7 @@ class CustomBtn extends StatelessWidget {
       onTap: onPressed,
       child: Container(
         height: 45,
-        width: 300,
+        width: width,
         decoration: const BoxDecoration(
             color: btnColors,
             borderRadius: BorderRadius.all(Radius.circular(20))),

@@ -37,13 +37,13 @@ class ForgetPassworScreen extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.all(20),
-                  child: Column(
+                  child: const Column(
                     children: [
                       Text(
                         "Forget your Password??",
                         style: topheadingText,
                       ),
-                      const SizedBox(
+                      SizedBox(
                         height: 10,
                       ),
                       Text(
@@ -57,8 +57,8 @@ class ForgetPassworScreen extends StatelessWidget {
                 const SizedBox(
                   height: 10,
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
+                const Padding(
+                  padding: const EdgeInsets.all(20),
                   child: CustomeInputs(
                       hintText: "Email",
                       icons: Icons.email,
@@ -67,7 +67,8 @@ class ForgetPassworScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                CustomBtn(btnTitle: "Send invitation", onPressed: () {})
+                CustomBtn(
+                    btnTitle: "Send invitation", width: 378, onPressed: () {})
               ],
             )),
       ),

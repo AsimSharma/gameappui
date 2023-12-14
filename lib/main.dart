@@ -5,6 +5,7 @@ import 'package:gameappui/screen/home_screen.dart';
 import 'package:gameappui/screen/login_screen.dart';
 import 'package:gameappui/screen/onboarding_screen.dart';
 import 'package:gameappui/screen/register_screen.dart';
+import 'package:gameappui/screen/reset_password.dart';
 // import 'package:gameappui/screen/otp_screen.dart'; // import 'package:gameappui/screen/onboarding_screen.dart';
 
 // import 'screen/forgetpassword_screen.dart';
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
         GameUiApp.home: (context) => const HomeScreen(),
         GameUiApp.login: (context) => const LoginScreen(),
         GameUiApp.register: (context) => const RegisterScreen(),
-        GameUiApp.forgetpassword: (context) => const ForgetPassworScreen()
+        GameUiApp.forgetpassword: (context) => const ForgetPassworScreen(),
+        GameUiApp.passwordreset: (context) => const ResetPassword()
       },
     );
   }
