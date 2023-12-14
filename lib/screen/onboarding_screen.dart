@@ -3,6 +3,7 @@ import 'package:gameappui/config/routes.dart';
 import 'package:gameappui/config/style/app_colors.dart';
 import 'package:gameappui/widgets/custome_btns.dart';
 import 'package:gameappui/widgets/logo_header.dart';
+import 'package:gameappui/widgets/responsive.dart';
 
 import '../models/onboarding_model.dart';
 
@@ -65,7 +66,10 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                         padding: const EdgeInsets.all(8.0),
                         child: Text(
                           onboardlist[index].decription,
-                          style: secondText,
+                          style: myTextStyle(
+                            Colors.white,
+                            0.014.toResponsive(context),
+                          ),
                           textAlign: TextAlign.center,
                         ),
                       )
@@ -81,7 +85,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               )),
           Positioned(
               bottom: 20,
-              width: 370,
+              width: 1.0.w(context),
               child: Container(
                 padding: const EdgeInsets.all(20),
                 child: Row(

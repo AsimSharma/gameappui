@@ -59,6 +59,26 @@ flutter:
   uses-material-design: true
   assets:
     - assets/images/
+  fonts:
+    - family: kalnia
+      fonts:
+        - asset: assets/fonts/Kalnia-VariableFont_wdth,wght.ttf
+
+    - family: Rubikbubble
+      fonts:
+        - asset: assets/fonts/RubikBubbles-Regular.ttf
+    
+    - family: Poppinsmedium
+      fonts:
+        - asset: assets/fonts/Poppins-MediumItalic.ttf
+
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/Poppins-Regular.ttf
+      
+
+
+
 
   # To add assets to your application, add an assets section, like this:
   # assets:

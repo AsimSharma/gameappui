@@ -11,8 +11,8 @@ Container logoheader() {
       children: [
         Icon(
           Icons.abc,
-          color: Colors.white,
-          size: 36,
+          color: Colors.orange,
+          size: 52,
         ),
         Text(
           "Mero Game",
