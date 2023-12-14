@@ -55,43 +55,48 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                       const SizedBox(
                         height: 15,
                       ),
-                      Text(
-                        onboardlist[index].decription,
-                        style: secondText,
-                        textAlign: TextAlign.center,
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          onboardlist[index].decription,
+                          style: secondText,
+                          textAlign: TextAlign.center,
+                        ),
                       )
                     ],
                   ),
                 );
               }),
           const Positioned(
-              bottom: 120,
-              left: 180,
+              bottom: 100,
+              left: 150,
               child: Text(
                 "heloo",
                 style: secondText,
               )),
           Positioned(
-              bottom: 50,
-              width: 350,
-              left: 20,
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text(
-                    "Skip This",
-                    style: secondText,
-                  ),
-                  CustomBtn2(
-                      btnTitle: "Next",
-                      onPressed: () {
-                        setState(() {
-                          pageController.nextPage(
-                              duration: const Duration(milliseconds: 800),
-                              curve: Curves.easeIn);
-                        });
-                      })
-                ],
+              bottom: 20,
+              width: 370,
+              child: Container(
+                padding: const EdgeInsets.all(20),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    const Text(
+                      "Skip This",
+                      style: secondText,
+                    ),
+                    CustomBtn2(
+                        btnTitle: "Next",
+                        onPressed: () {
+                          setState(() {
+                            pageController.nextPage(
+                                duration: const Duration(milliseconds: 800),
+                                curve: Curves.easeIn);
+                          });
+                        })
+                  ],
+                ),
               ))
         ],
       ),

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:gameappui/screen/onboarding_screen.dart';
-// import 'package:gameappui/screen/register_screen.dart';
+import 'package:gameappui/screen/otp_screen.dart';
+// import 'package:gameappui/screen/onboarding_screen.dart';
 
+// import 'screen/forgetpassword_screen.dart';
+// import 'package:gameappui/screen/register_screen.dart';
 // import 'screen/login_screen.dart';
 
 void main() {
@@ -15,7 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: OnBoardingScreen(),
+      home: OtpScreen(),
     );
   }
 }
