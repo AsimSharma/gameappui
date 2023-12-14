@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gameappui/style/app_colors.dart';
+import 'package:gameappui/config/style/app_colors.dart';
 
 class CustomeInputs extends StatefulWidget {
   const CustomeInputs(
@@ -37,7 +37,7 @@ class _CustomeInputsState extends State<CustomeInputs> {
       ),
       child: TextFormField(
         style: const TextStyle(color: Colors.black),
-        obscureText: obscureTextbool ? true : false,
+        obscureText: obscureTextbool == widget.credentials ? true : false,
         validator: widget.validators,
         controller: widget.textEditingController,
         keyboardType: widget.textinputTypes,

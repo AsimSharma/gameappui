@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gameappui/style/app_colors.dart';
+import 'package:gameappui/config/style/app_colors.dart';
 
 class SocialLoginBtn extends StatelessWidget {
   const SocialLoginBtn({super.key});

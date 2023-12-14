@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gameappui/style/app_colors.dart';
+import 'package:gameappui/config/routes.dart';
+import 'package:gameappui/config/style/app_colors.dart';
 import 'package:gameappui/widgets/custome_btns.dart';
 import 'package:gameappui/widgets/custome_inputs.dart';
 import 'package:gameappui/widgets/logo_header.dart';
@@ -98,11 +99,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(
                       height: 17,
                     ),
-                    Text.rich(TextSpan(children: [
-                      TextSpan(
-                          text: "Don't you have account??", style: secondText),
-                      TextSpan(text: "Login", style: signuplin)
-                    ]))
+                    Row(
+                      children: [
+                        const Text("Don't you have account??",
+                            style: secondText),
+                        TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, GameUiApp.login);
+                            },
+                            child: const Text("Login", style: signuplin))
+                      ],
+                    ),
                   ],
                 ),
               ))

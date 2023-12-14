@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gameappui/style/app_colors.dart';
+import 'package:gameappui/config/style/app_colors.dart';
 
 class CustomBtn extends StatelessWidget {
   const CustomBtn({super.key, required this.btnTitle, required this.onPressed});

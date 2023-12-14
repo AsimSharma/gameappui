@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gameappui/style/app_colors.dart';
+import 'package:gameappui/config/style/app_colors.dart';
+import 'package:gameappui/widgets/custome_inputs.dart';
+
+import '../widgets/custome_btns.dart';
 
 class ForgetPassworScreen extends StatelessWidget {
   const ForgetPassworScreen({super.key});
@@ -16,16 +19,55 @@ class ForgetPassworScreen extends StatelessWidget {
               children: [
                 const Center(
                     child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.only(top: 8.0),
                   child: Text(
                     "Forget Password",
                     style: secondText,
                   ),
                 )),
-                Container(
-                  height: 200,
+                const SizedBox(
+                  height: 20,
+                ),
+                SizedBox(
+                  height: 250,
                   child: Image.asset("assets/images/forgetpassword.png"),
-                )
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(20),
+                  child: Column(
+                    children: [
+                      Text(
+                        "Forget your Password??",
+                        style: topheadingText,
+                      ),
+                      const SizedBox(
+                        height: 10,
+                      ),
+                      Text(
+                        "Enter your Email addres we will provide the password restlink in your email",
+                        style: secondText,
+                        textAlign: TextAlign.center,
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CustomeInputs(
+                      hintText: "Email",
+                      icons: Icons.email,
+                      textinputTypes: TextInputType.emailAddress),
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                CustomBtn(btnTitle: "Send invitation", onPressed: () {})
               ],
             )),
       ),

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:gameappui/config/routes.dart';
 
-import 'package:gameappui/style/app_colors.dart';
+import 'package:gameappui/config/style/app_colors.dart';
 
 import '../widgets/custome_btns.dart';
 import '../widgets/custome_inputs.dart';
@@ -101,17 +102,22 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 15,
                     ),
-                    const Center(
+                    Center(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text(
+                          const Text(
                             "Don't have an acounts??",
                             style: secondText,
                           ),
-                          Text(
-                            "SignUp",
-                            style: signuplin,
+                          TextButton(
+                            onPressed: () {
+                              Navigator.pushNamed(context, GameUiApp.register);
+                            },
+                            child: const Text(
+                              "SignUp",
+                              style: signuplin,
+                            ),
                           ),
                         ],
                       ),

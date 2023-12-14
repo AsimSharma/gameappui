@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../style/app_colors.dart';
+import '../config/style/app_colors.dart';
 import '../widgets/custome_btns.dart';
 
 class OtpScreen extends StatelessWidget {
@@ -10,49 +10,56 @@ class OtpScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-              width: double.maxFinite,
-              color: primarycolors,
-              child: Column(
-                // crossAxisAlignment: ,
-                children: [
-                  const Center(
-                      child: Padding(
-                    padding: EdgeInsets.only(top: 20),
-                    child: Text(
-                      "Verification Code",
-                      style: secondText,
-                    ),
-                  )),
-                  Container(
-                    height: 280,
-                    child: Image.asset("assets/images/verification.png"),
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Text(
-                    "Verifications Otp Code",
-                    style: headingText,
-                  ),
-                  const SizedBox(
-                    height: 10,
-                  ),
-                  const Text(
-                    "we have send verification to your Email Idwe have send verification to your Email Id",
+        child: Container(
+            width: double.maxFinite,
+            color: primarycolors,
+            child: Column(
+              // crossAxisAlignment: ,
+              children: [
+                const Center(
+                    child: Padding(
+                  padding: EdgeInsets.only(top: 20),
+                  child: Text(
+                    "Verification Code",
                     style: secondText,
-                    textAlign: TextAlign.center,
                   ),
-                  //focous node
-                  const OTPFields(),
-                  CustomBtn(
-                    btnTitle: "Done",
-                    onPressed: () {},
-                  )
-                ],
-              )),
-        ),
+                )),
+                Container(
+                  height: 280,
+                  child: Image.asset("assets/images/verification.png"),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Text(
+                  "Verifications Otp Code",
+                  style: headingText,
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                const Text(
+                  "we have send verification to your Email Idwe have send verification to your Email Id",
+                  style: secondText,
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(
+                  height: 20,
+                ),
+                //focous node
+                const OTPFields(),
+                const SizedBox(
+                  height: 20,
+                ),
+                CustomBtn(
+                  btnTitle: "Done",
+                  onPressed: () {},
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+              ],
+            )),
       ),
     );
   }
@@ -64,10 +71,10 @@ class OTPFields extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _OTPFieldsState createState() => _OTPFieldsState();
+  OTPFieldsState createState() => OTPFieldsState();
 }
 
-class _OTPFieldsState extends State<OTPFields> {
+class OTPFieldsState extends State<OTPFields> {
   FocusNode? pin2FN;
   FocusNode? pin3FN;
   FocusNode? pin4FN;
@@ -103,7 +110,7 @@ class _OTPFieldsState extends State<OTPFields> {
         children: [
           const SizedBox(height: 10.0),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
                 width: 60,
@@ -118,6 +125,9 @@ class _OTPFieldsState extends State<OTPFields> {
                   },
                 ),
               ),
+              const SizedBox(
+                width: 10,
+              ),
               SizedBox(
                 width: 60,
                 child: TextFormField(
@@ -129,6 +139,9 @@ class _OTPFieldsState extends State<OTPFields> {
                   onChanged: (value) => nextField(value, pin3FN),
                 ),
               ),
+              const SizedBox(
+                width: 10,
+              ),
               SizedBox(
                 width: 60,
                 child: TextFormField(
@@ -139,6 +152,9 @@ class _OTPFieldsState extends State<OTPFields> {
                   decoration: inputDecoration,
                   onChanged: (value) => nextField(value, pin4FN),
                 ),
+              ),
+              const SizedBox(
+                width: 10,
               ),
               SizedBox(
                 width: 60,

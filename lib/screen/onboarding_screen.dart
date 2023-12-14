@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:gameappui/style/app_colors.dart';
+import 'package:gameappui/config/routes.dart';
+import 'package:gameappui/config/style/app_colors.dart';
 import 'package:gameappui/widgets/custome_btns.dart';
 import 'package:gameappui/widgets/logo_header.dart';
 
@@ -38,6 +39,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               controller: pageController,
               physics: const BouncingScrollPhysics(),
               itemCount: onboardlist.length,
+              onPageChanged: (value) {
+                setState(() {
+                  pageIndex = value;
+                });
+              },
               itemBuilder: (context, index) {
                 return Container(
                   color: primarycolors,
@@ -67,12 +73,11 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   ),
                 );
               }),
-          const Positioned(
+          Positioned(
               bottom: 100,
               left: 150,
-              child: Text(
-                "heloo",
-                style: secondText,
+              child: Row(
+                children: [...List.generate(3, (index) => dootedBox(index))],
               )),
           Positioned(
               bottom: 20,
@@ -82,17 +87,23 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Text(
-                      "Skip This",
-                      style: secondText,
-                    ),
+                    TextButton(
+                        onPressed: () {
+                          Navigator.pushNamed(context, GameUiApp.home);
+                        },
+                        child: const Text(
+                          "Skiped me",
+                          style: secondText,
+                        )),
                     CustomBtn2(
                         btnTitle: "Next",
                         onPressed: () {
                           setState(() {
-                            pageController.nextPage(
-                                duration: const Duration(milliseconds: 800),
-                                curve: Curves.easeIn);
+                            pageIndex == onboardlist.length - 1
+                                ? Navigator.pushNamed(context, GameUiApp.home)
+                                : pageController.nextPage(
+                                    duration: const Duration(milliseconds: 800),
+                                    curve: Curves.easeIn);
                           });
                         })
                   ],
@@ -100,6 +111,17 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               ))
         ],
       ),
+    );
+  }
+
+  Container dootedBox(int index) {
+    return Container(
+      margin: const EdgeInsets.only(left: 10),
+      height: 10,
+      width: 10,
+      decoration: BoxDecoration(
+          color: pageIndex == index ? Colors.red : Colors.blue,
+          borderRadius: const BorderRadius.all(Radius.circular(10))),
     );
   }
 }

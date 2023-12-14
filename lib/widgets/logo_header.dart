@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../style/app_colors.dart';
+import '../config/style/app_colors.dart';
 
 Container logoheader() {
   return Container(
