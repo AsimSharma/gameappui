@@ -6,19 +6,20 @@ class CustomBtn extends StatelessWidget {
       {super.key,
       required this.btnTitle,
       required this.onPressed,
-      this.width = 300});
+      this.width = 300,
+      this.height = 45});
 
   final String btnTitle;
   final VoidCallback onPressed;
-  final double width;
+  final double width, height;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onPressed,
       child: Container(
-        height: 45,
         width: width,
+        height: height,
         decoration: const BoxDecoration(
             color: btnColors,
             borderRadius: BorderRadius.all(Radius.circular(20))),

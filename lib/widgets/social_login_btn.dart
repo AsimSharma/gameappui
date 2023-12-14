@@ -1,17 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gameappui/config/style/app_colors.dart';
 
 class SocialLoginBtn extends StatelessWidget {
-  const SocialLoginBtn({super.key});
+  const SocialLoginBtn({super.key, required this.icons});
+
+  final IconData icons;
 
   @override
   Widget build(BuildContext context) {
-    return const CircleAvatar(
-      backgroundColor: secondarycolors,
-      child: Icon(
-        Icons.facebook,
-        color: Colors.white,
-        size: 20,
+    return CircleAvatar(
+      backgroundColor: primarycolors,
+      child: IconButton(
+        onPressed: () {},
+        icon: FaIcon(
+          icons,
+          color: textColor,
+          size: 20,
+        ),
       ),
     );
   }

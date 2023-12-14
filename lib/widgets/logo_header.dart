@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:gameappui/widgets/responsive.dart';
 
 import '../config/style/app_colors.dart';
 
-Container logoheader() {
+Container logoheader(BuildContext context) {
   return Container(
-    height: 50,
+    height: 0.08.h(context),
     padding: const EdgeInsets.all(10),
-    child: const Row(
+    child: Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(
@@ -16,7 +17,8 @@ Container logoheader() {
         ),
         Text(
           "Mero Game",
-          style: headingText,
+          style:
+              myTextStyle(logoColor, 0.03.toResponsive(context), "Rubikbubble"),
         )
       ],
     ),

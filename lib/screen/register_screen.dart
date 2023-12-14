@@ -4,6 +4,7 @@ import 'package:gameappui/config/style/app_colors.dart';
 import 'package:gameappui/widgets/custome_btns.dart';
 import 'package:gameappui/widgets/custome_inputs.dart';
 import 'package:gameappui/widgets/logo_header.dart';
+import 'package:gameappui/widgets/responsive.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -35,7 +36,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
           ),
           Positioned(
               top: 140,
-              height: 500,
+              height: 0.8.h(context),
               width: width,
               child: Container(
                 margin: const EdgeInsets.all(20),
@@ -45,7 +46,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Column(
                   children: [
-                    logoheader(),
+                    logoheader(context),
                     const SizedBox(
                       height: 14,
                     ),
@@ -95,7 +96,14 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(
                       height: 15,
                     ),
-                    CustomBtn(btnTitle: "SignUp", onPressed: () {}),
+                    Container(
+                        width: 0.8.w(context),
+                        height: 0.07.h(context),
+                        child: CustomBtn(
+                            btnTitle: "SignUp",
+                            width: width,
+                            height: height,
+                            onPressed: () {})),
                     const SizedBox(
                       height: 15,
                     ),

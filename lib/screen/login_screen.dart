@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gameappui/config/routes.dart';
 
 import 'package:gameappui/config/style/app_colors.dart';
+import 'package:gameappui/widgets/responsive.dart';
 
 import '../widgets/custome_btns.dart';
 import '../widgets/custome_inputs.dart';
@@ -35,7 +37,7 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
             Positioned(
               top: 140,
-              height: 500,
+              height: 0.70.h(context),
               width: width,
               child: Container(
                 margin: const EdgeInsets.all(20),
@@ -45,7 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     borderRadius: BorderRadius.all(Radius.circular(10))),
                 child: Column(
                   children: [
-                    logoheader(),
+                    logoheader(context),
                     const CustomeInputs(
                       hintText: "Emaill",
                       icons: Icons.email,
@@ -76,10 +78,14 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 15,
                     ),
-                    CustomBtn(
-                      btnTitle: "Login",
-                      onPressed: () {},
-                    ),
+                    Container(
+                        width: 0.8.w(context),
+                        height: 0.07.h(context),
+                        child: CustomBtn(
+                            btnTitle: "Login",
+                            width: width,
+                            height: height,
+                            onPressed: () {})),
                     const SizedBox(
                       height: 15,
                     ),
@@ -95,11 +101,27 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        SocialLoginBtn(),
-                        SizedBox(
-                          width: 10,
+                        SocialLoginBtn(
+                          icons: FontAwesomeIcons.facebook,
                         ),
-                        SocialLoginBtn()
+                        SizedBox(
+                          width: 3,
+                        ),
+                        SocialLoginBtn(
+                          icons: FontAwesomeIcons.google,
+                        ),
+                        SizedBox(
+                          width: 3,
+                        ),
+                        SocialLoginBtn(
+                          icons: FontAwesomeIcons.twitter,
+                        ),
+                        SizedBox(
+                          width: 3,
+                        ),
+                        SocialLoginBtn(
+                          icons: FontAwesomeIcons.github,
+                        )
                       ],
                     ),
                     const SizedBox(

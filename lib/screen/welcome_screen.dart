@@ -30,7 +30,7 @@ class WelcomeScreen extends StatelessWidget {
                 margin: const EdgeInsets.all(20),
                 child: Column(
                   children: [
-                    logoheader(),
+                    logoheader(context),
                     const CircleAvatar(
                       radius: 52,
                       backgroundColor: primarycolors,

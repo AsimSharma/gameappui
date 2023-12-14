@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:gameappui/widgets/responsive.dart';
 
 const Color primarycolors = Color(0xff292F3D);
 const Color secondarycolors = Color.fromARGB(255, 68, 75, 90);
 const Color inputcolor = Color.fromARGB(255, 210, 205, 224);
 const Color logoColor = Colors.orange;
-
 const Color btnColors = Color.fromARGB(255, 10, 222, 17);
+
+const Color textColor = Colors.white;
 
 const headingText =
     TextStyle(color: logoColor, fontSize: 25, fontFamily: "Rubikbubble");
@@ -22,11 +22,11 @@ const topheadingText = TextStyle(
     fontWeight: FontWeight.w600,
     fontFamily: "kalnia");
 
-myTextStyle(Color color, double fontSize) {
+myTextStyle(Color color, double fontSize, String fontFamily) {
   return TextStyle(
     color: color,
     fontSize: fontSize,
-    fontFamily: 'Poppinsmedium',
+    fontFamily: fontFamily,
   );
 }
 

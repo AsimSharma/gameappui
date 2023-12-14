@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gameappui/config/style/app_colors.dart';
+import 'package:gameappui/widgets/responsive.dart';
 
 class CustomeInputs extends StatefulWidget {
   const CustomeInputs(
@@ -29,7 +30,7 @@ class _CustomeInputsState extends State<CustomeInputs> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 45,
+      height: 0.070.h(context),
       padding: const EdgeInsets.all(10),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),

@@ -51,13 +51,14 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      logoheader(),
+                      logoheader(context),
                       const SizedBox(
                         height: 15,
                       ),
                       Text(
                         onboardlist[index].title,
-                        style: topheadingText,
+                        style: myTextStyle(textColor,
+                            0.020.toResponsive(context), "Rubikbubble"),
                       ),
                       const SizedBox(
                         height: 15,
@@ -69,6 +70,7 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
                           style: myTextStyle(
                             Colors.white,
                             0.014.toResponsive(context),
+                            "Poppinsmedium",
                           ),
                           textAlign: TextAlign.center,
                         ),
@@ -79,8 +81,9 @@ class _OnBoardingScreenState extends State<OnBoardingScreen> {
               }),
           Positioned(
               bottom: 100,
-              left: 150,
+              width: 1.0.w(context),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [...List.generate(3, (index) => dootedBox(index))],
               )),
           Positioned(
