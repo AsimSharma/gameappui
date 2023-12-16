@@ -68,8 +68,8 @@ class ForgetPassworScreen extends StatelessWidget {
                       icons: Icons.email,
                       textinputTypes: TextInputType.emailAddress),
                 ),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: 0.0003.h(context),
                 ),
                 SizedBox(
                   width: 0.9.w(context),

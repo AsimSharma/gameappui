@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gameappui/widgets/extension_responsive.dart';
 
 import '../config/style/app_colors.dart';
 import '../widgets/custome_btns.dart';
@@ -16,31 +17,35 @@ class OtpScreen extends StatelessWidget {
             child: Column(
               // crossAxisAlignment: ,
               children: [
-                const Center(
+                Center(
                     child: Padding(
-                  padding: EdgeInsets.only(top: 20),
+                  padding: const EdgeInsets.only(top: 20),
                   child: Text(
                     "Verification Code",
-                    style: secondText,
+                    style: myTextStyle(
+                        textColor, 0.01.toResponsive(context), "Poppinsmedium"),
                   ),
                 )),
-                Container(
-                  height: 280,
+                SizedBox(
+                  height: 0.3.h(context),
+                  width: 1.0.w(context),
                   child: Image.asset("assets/images/verification.png"),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
+                Text(
                   "Verifications Otp Code",
-                  style: headingText,
+                  style: myTextStyle(
+                      textColor, 0.022.toResponsive(context), "Kalnia"),
                 ),
                 const SizedBox(
                   height: 10,
                 ),
-                const Text(
+                Text(
                   "we have send verification to your Email Idwe have send verification to your Email Id",
-                  style: secondText,
+                  style: myTextStyle(
+                      textColor, 0.0099.toResponsive(context), "Poppinsmedium"),
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(
@@ -51,9 +56,13 @@ class OtpScreen extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                CustomBtn(
-                  btnTitle: "Done",
-                  onPressed: () {},
+                SizedBox(
+                  width: 0.9.w(context),
+                  height: 0.07.h(context),
+                  child: CustomBtn(
+                    btnTitle: "Done",
+                    onPressed: () {},
+                  ),
                 ),
                 const SizedBox(
                   height: 10,

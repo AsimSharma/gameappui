@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gameappui/config/routes.dart';
 import 'package:gameappui/config/style/app_colors.dart';
 import 'package:gameappui/widgets/custome_btns.dart';
@@ -68,7 +69,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     CustomeInputs(
                         hintText: "Password",
-                        icons: Icons.lock,
+                        icons: FontAwesomeIcons.lock,
                         textEditingController: passwordController,
                         credentials: true,
                         textinputTypes: TextInputType.text),
@@ -77,7 +78,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     CustomeInputs(
                         hintText: "Confirm-password",
-                        icons: Icons.lock,
+                        icons: FontAwesomeIcons.lock,
                         credentials: true,
                         textEditingController: confirmpassword,
                         textinputTypes: TextInputType.text),

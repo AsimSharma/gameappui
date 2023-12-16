@@ -50,7 +50,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     logoheader(context),
                     const CustomeInputs(
                       hintText: "Emaill",
-                      icons: Icons.email,
+                      icons: FontAwesomeIcons.mailchimp,
                       textinputTypes: TextInputType.emailAddress,
                     ),
                     const SizedBox(
@@ -58,7 +58,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     ),
                     const CustomeInputs(
                       hintText: "password",
-                      icons: Icons.lock,
+                      icons: FontAwesomeIcons.lock,
                       credentials: true,
                       textinputTypes: TextInputType.emailAddress,
                     ),

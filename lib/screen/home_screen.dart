@@ -47,7 +47,12 @@ class HomeScreen extends StatelessWidget {
                   onPressed: () {
                     Navigator.popAndPushNamed(context, GameUiApp.welcomescreen);
                   },
-                  child: const Text("wellcome_screen"))
+                  child: const Text("wellcome_screen")),
+              TextButton(
+                  onPressed: () {
+                    Navigator.popAndPushNamed(context, GameUiApp.optscreen);
+                  },
+                  child: const Text("Otp_screen"))
             ],
           ),
         ),

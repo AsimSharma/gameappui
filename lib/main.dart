@@ -4,6 +4,7 @@ import 'package:gameappui/screen/forgetpassword_screen.dart';
 import 'package:gameappui/screen/home_screen.dart';
 import 'package:gameappui/screen/login_screen.dart';
 import 'package:gameappui/screen/onboarding_screen.dart';
+import 'package:gameappui/screen/otp_screen.dart';
 import 'package:gameappui/screen/register_screen.dart';
 import 'package:gameappui/screen/reset_password.dart';
 import 'package:gameappui/screen/welcome_screen.dart';
@@ -36,7 +37,8 @@ class MyApp extends StatelessWidget {
         GameUiApp.passwordreset: (context) => const ResetPassword(),
         GameUiApp.passwordresetsucessfully: (context) =>
             const PasswordResetSucessFull(),
-        GameUiApp.welcomescreen: (context) => const WelcomeScreen()
+        GameUiApp.welcomescreen: (context) => const WelcomeScreen(),
+        GameUiApp.optscreen: (context) => const OtpScreen()
       },
     );
   }

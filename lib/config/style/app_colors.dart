@@ -16,13 +16,8 @@ const secondText = TextStyle(
     fontFamily: "Poppinsmedium");
 const signuplin =
     TextStyle(color: Colors.blue, fontSize: 14, fontFamily: "Poppinsmedium");
-const topheadingText = TextStyle(
-    color: Colors.white,
-    fontSize: 29,
-    fontWeight: FontWeight.w600,
-    fontFamily: "kalnia");
 
-myTextStyle(Color color, double fontSize, String fontFamily) {
+TextStyle myTextStyle(Color color, double fontSize, String fontFamily) {
   return TextStyle(
     color: color,
     fontSize: fontSize,

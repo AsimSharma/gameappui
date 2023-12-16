@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gameappui/config/style/app_colors.dart';
 import 'package:gameappui/widgets/extension_responsive.dart';
 
@@ -46,14 +47,15 @@ class _CustomeInputsState extends State<CustomeInputs> {
             focusColor: inputcolor,
             hoverColor: inputcolor,
             fillColor: inputcolor,
-            prefixIcon: Icon(
+            prefixIcon: FaIcon(
               widget.icons,
               color: Colors.black,
-              size: 20,
             ),
             suffixIcon: widget.credentials
                 ? IconButton(
-                    icon: const Icon(Icons.remove_red_eye),
+                    icon: obscureTextbool == widget.credentials
+                        ? const FaIcon(FontAwesomeIcons.eye)
+                        : const FaIcon(FontAwesomeIcons.eyeSlash),
                     onPressed: () {
                       setState(() {
                         obscureTextbool = !obscureTextbool;

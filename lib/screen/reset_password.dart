@@ -80,8 +80,8 @@ class ResetPassword extends StatelessWidget {
                       icons: Icons.lock,
                       textinputTypes: TextInputType.emailAddress),
                 ),
-                const SizedBox(
-                  height: 20,
+                SizedBox(
+                  height: 0.02.h(context),
                 ),
                 SizedBox(
                   width: 0.9.w(context),
