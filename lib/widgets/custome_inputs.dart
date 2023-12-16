@@ -31,8 +31,8 @@ class _CustomeInputsState extends State<CustomeInputs> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 0.070.h(context),
-      padding: const EdgeInsets.all(10),
+      height: 0.075.h(context),
+      padding: const EdgeInsets.all(17),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(30),
         color: inputcolor,
@@ -44,23 +44,30 @@ class _CustomeInputsState extends State<CustomeInputs> {
         controller: widget.textEditingController,
         keyboardType: widget.textinputTypes,
         decoration: InputDecoration(
+            contentPadding: const EdgeInsets.symmetric(vertical: 0.0),
             focusColor: inputcolor,
             hoverColor: inputcolor,
             fillColor: inputcolor,
-            prefixIcon: FaIcon(
-              widget.icons,
-              color: Colors.black,
+            prefixIcon: Padding(
+              padding: const EdgeInsets.all(0.0),
+              child: FaIcon(
+                widget.icons,
+                color: Colors.black,
+              ),
             ),
             suffixIcon: widget.credentials
-                ? IconButton(
-                    icon: obscureTextbool == widget.credentials
-                        ? const FaIcon(FontAwesomeIcons.eye)
-                        : const FaIcon(FontAwesomeIcons.eyeSlash),
-                    onPressed: () {
-                      setState(() {
-                        obscureTextbool = !obscureTextbool;
-                      });
-                    },
+                ? Padding(
+                    padding: const EdgeInsets.all(0.0),
+                    child: IconButton(
+                      icon: obscureTextbool == widget.credentials
+                          ? const FaIcon(FontAwesomeIcons.eye)
+                          : const FaIcon(FontAwesomeIcons.eyeSlash),
+                      onPressed: () {
+                        setState(() {
+                          obscureTextbool = !obscureTextbool;
+                        });
+                      },
+                    ),
                   )
                 : null,
             hintText: widget.hintText,
