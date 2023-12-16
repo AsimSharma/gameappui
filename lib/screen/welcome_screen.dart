@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gameappui/config/style/app_colors.dart';
 import 'package:gameappui/widgets/custome_btns.dart';
+import 'package:gameappui/widgets/extension_responsive.dart';
 import 'package:gameappui/widgets/logo_header.dart';
 
 class WelcomeScreen extends StatelessWidget {
@@ -31,23 +33,30 @@ class WelcomeScreen extends StatelessWidget {
                 child: Column(
                   children: [
                     logoheader(context),
-                    const CircleAvatar(
-                      radius: 52,
+                    CircleAvatar(
+                      radius: 0.05.toResponsive(context),
                       backgroundColor: primarycolors,
+                      child: FaIcon(
+                        FontAwesomeIcons.person,
+                        color: Colors.white,
+                        size: 0.05.toResponsive(context),
+                      ),
                     ),
                     const SizedBox(
                       height: 15,
                     ),
-                    const Text(
+                    Text(
                       "congratulations",
-                      style: signuplin,
+                      style: myTextStyle(Colors.blue,
+                          0.01.toResponsive(context), "Poppinsmedium"),
                     ),
                     const SizedBox(
                       height: 5,
                     ),
-                    const Text(
+                    Text(
                       "Now you are Register",
-                      style: topheadingText,
+                      style: myTextStyle(
+                          textColor, 0.022.toResponsive(context), "Kalnia"),
                     ),
                     const SizedBox(
                       height: 8,
@@ -58,14 +67,19 @@ class WelcomeScreen extends StatelessWidget {
                     const SizedBox(
                       height: 12,
                     ),
-                    const Text(
+                    Text(
                       "Get Ready to play",
-                      style: secondText,
+                      style: myTextStyle(textColor, 0.01.toResponsive(context),
+                          "Poppinsmedium"),
                     ),
                     const SizedBox(
                       height: 15,
                     ),
-                    CustomBtn(btnTitle: "Start Now", onPressed: () {})
+                    SizedBox(
+                        width: 0.9.w(context),
+                        height: 0.07.h(context),
+                        child:
+                            CustomBtn(btnTitle: "Start Now", onPressed: () {}))
                   ],
                 ),
               ))

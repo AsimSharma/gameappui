@@ -4,7 +4,7 @@ import 'package:gameappui/config/style/app_colors.dart';
 import 'package:gameappui/widgets/custome_btns.dart';
 import 'package:gameappui/widgets/custome_inputs.dart';
 import 'package:gameappui/widgets/logo_header.dart';
-import 'package:gameappui/widgets/responsive.dart';
+import 'package:gameappui/widgets/extension_responsive.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -86,18 +86,20 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     ),
                     Row(children: [
                       Checkbox(value: true, onChanged: (bool) {}),
-                      const Expanded(
+                      Expanded(
                         child: Text(
                           "I agree to the terms and conditions ",
-                          style: secondText,
+                          style: myTextStyle(textColor,
+                              0.012.toResponsive(context), "Poppinsmedium"),
+                          textAlign: TextAlign.center,
                         ),
                       )
                     ]),
                     const SizedBox(
                       height: 15,
                     ),
-                    Container(
-                        width: 0.8.w(context),
+                    SizedBox(
+                        width: 0.84.w(context),
                         height: 0.07.h(context),
                         child: CustomBtn(
                             btnTitle: "SignUp",
@@ -110,8 +112,9 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        const Text("Don't you have account??",
-                            style: secondText),
+                        Text("Don't you have account??",
+                            style: myTextStyle(textColor,
+                                0.01.toResponsive(context), "Poppinsmedium")),
                         TextButton(
                             onPressed: () {
                               Navigator.pushNamed(context, GameUiApp.login);

@@ -35,6 +35,16 @@ class HomeScreen extends StatelessWidget {
                   child: const Text("password_resets_successfully")),
               TextButton(
                   onPressed: () {
+                    Navigator.popAndPushNamed(context, GameUiApp.login);
+                  },
+                  child: const Text("login")),
+              TextButton(
+                  onPressed: () {
+                    Navigator.popAndPushNamed(context, GameUiApp.register);
+                  },
+                  child: const Text("register")),
+              TextButton(
+                  onPressed: () {
                     Navigator.popAndPushNamed(context, GameUiApp.welcomescreen);
                   },
                   child: const Text("wellcome_screen"))

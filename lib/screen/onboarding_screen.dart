@@ -3,7 +3,7 @@ import 'package:gameappui/config/routes.dart';
 import 'package:gameappui/config/style/app_colors.dart';
 import 'package:gameappui/widgets/custome_btns.dart';
 import 'package:gameappui/widgets/logo_header.dart';
-import 'package:gameappui/widgets/responsive.dart';
+import 'package:gameappui/widgets/extension_responsive.dart';
 
 import '../models/onboarding_model.dart';
 

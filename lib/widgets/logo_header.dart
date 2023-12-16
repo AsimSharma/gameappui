@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:gameappui/widgets/responsive.dart';
+import 'package:gameappui/widgets/extension_responsive.dart';
 
 import '../config/style/app_colors.dart';
 

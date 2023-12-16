@@ -3,7 +3,7 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:gameappui/config/routes.dart';
 
 import 'package:gameappui/config/style/app_colors.dart';
-import 'package:gameappui/widgets/responsive.dart';
+import 'package:gameappui/widgets/extension_responsive.dart';
 
 import '../widgets/custome_btns.dart';
 import '../widgets/custome_inputs.dart';
@@ -68,17 +68,21 @@ class _LoginScreenState extends State<LoginScreen> {
                     Align(
                       alignment: Alignment.bottomRight,
                       child: TextButton(
-                        onPressed: () {},
-                        child: const Text(
+                        onPressed: () {
+                          Navigator.pushNamed(
+                              context, GameUiApp.forgetpassword);
+                        },
+                        child: Text(
                           "Forget Password??",
-                          style: secondText,
+                          style: myTextStyle(textColor,
+                              0.01.toResponsive(context), "Poppinsmedium"),
                         ),
                       ),
                     ),
                     const SizedBox(
                       height: 15,
                     ),
-                    Container(
+                    SizedBox(
                         width: 0.8.w(context),
                         height: 0.07.h(context),
                         child: CustomBtn(
@@ -89,10 +93,11 @@ class _LoginScreenState extends State<LoginScreen> {
                     const SizedBox(
                       height: 15,
                     ),
-                    const Center(
+                    Center(
                       child: Text(
                         "or by social accounts",
-                        style: secondText,
+                        style: myTextStyle(textColor,
+                            0.01.toResponsive(context), "Poppinsmedium"),
                       ),
                     ),
                     const SizedBox(
@@ -131,9 +136,10 @@ class _LoginScreenState extends State<LoginScreen> {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          const Text(
+                          Text(
                             "Don't have an acounts??",
-                            style: secondText,
+                            style: myTextStyle(textColor,
+                                0.01.toResponsive(context), "Poppinsmedium"),
                           ),
                           TextButton(
                             onPressed: () {

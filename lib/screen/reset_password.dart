@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gameappui/widgets/extension_responsive.dart';
 
 import '../config/style/app_colors.dart';
 import '../widgets/custome_btns.dart';
@@ -29,7 +30,8 @@ class ResetPassword extends StatelessWidget {
                   height: 20,
                 ),
                 SizedBox(
-                  height: 250,
+                  height: 0.3.h(context),
+                  width: 1.0.w(context),
                   child: Image.asset("assets/images/forgetpassword.png"),
                 ),
                 const SizedBox(
@@ -37,18 +39,20 @@ class ResetPassword extends StatelessWidget {
                 ),
                 Container(
                   padding: const EdgeInsets.all(20),
-                  child: const Column(
+                  child: Column(
                     children: [
                       Text(
                         "Setyour Password",
-                        style: topheadingText,
+                        style: myTextStyle(
+                            textColor, 0.022.toResponsive(context), "Kalnia"),
                       ),
                       const SizedBox(
                         height: 10,
                       ),
                       Text(
                         "Enter your new passwor password to  ",
-                        style: secondText,
+                        style: myTextStyle(textColor,
+                            0.01.toResponsive(context), "Poppinsmedium"),
                         textAlign: TextAlign.center,
                       )
                     ],
@@ -58,7 +62,7 @@ class ResetPassword extends StatelessWidget {
                   height: 10,
                 ),
                 const Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
                   child: CustomeInputs(
                       hintText: "password",
                       credentials: true,
@@ -69,7 +73,7 @@ class ResetPassword extends StatelessWidget {
                   height: 15,
                 ),
                 const Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20),
+                  padding: EdgeInsets.symmetric(horizontal: 20),
                   child: CustomeInputs(
                       hintText: "Confirm_password",
                       credentials: true,
@@ -79,10 +83,14 @@ class ResetPassword extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                CustomBtn(
-                  btnTitle: "Change password",
-                  onPressed: () {},
-                  width: 370,
+                SizedBox(
+                  width: 0.9.w(context),
+                  height: 0.07.h(context),
+                  child: CustomBtn(
+                    btnTitle: "Change password",
+                    onPressed: () {},
+                    width: 370,
+                  ),
                 )
               ],
             )),

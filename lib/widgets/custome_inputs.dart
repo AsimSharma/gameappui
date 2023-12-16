@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gameappui/config/style/app_colors.dart';
-import 'package:gameappui/widgets/responsive.dart';
+import 'package:gameappui/widgets/extension_responsive.dart';
 
 class CustomeInputs extends StatefulWidget {
   const CustomeInputs(
